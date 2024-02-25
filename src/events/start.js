@@ -17,6 +17,7 @@ module.exports = {
 
          client.sendPhoto(msg.chat.id, 'https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg', options);
 
+
          //client.sendVideo(msg.chat.id, 'video.mp4', {caption: set.caption, reply_markup: catalogBtn.reply_markup});
       }
    },

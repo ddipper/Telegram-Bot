@@ -3,28 +3,46 @@ const fs = require('node:fs')
 module.exports = {
    name: 'callback_query',
 	async execute(client, callbackQuery) {
-      if (callbackQuery.data == 'start') {
+      if (callbackQuery.data == 'start' || callbackQuery.data == 'back') {
          client.answerCallbackQuery(callbackQuery.id).then(async () => {
 
             const options = {
                chat_id: callbackQuery.message.chat.id,
                message_id: callbackQuery.message.message_id,
-               reply_markup: {inline_keyboard: [ 
-                  [{text: 'кнопка 1', callback_data: 'button1'}],
-                  [{text: 'кнопка 2', callback_data: 'button2'}],
-                  [{text: 'кнопка 3', callback_data: 'button3'}],
-                  [{text: 'кнопка 4', callback_data: 'button4'}],
-                  [{text: 'кнопка 5', callback_data: 'button5'}],
-                  [{text: 'кнопка 6', callback_data: 'button6'}]]
+               reply_markup: { inline_keyboard: [ 
+                  [{text: 'Депрессия', callback_data: 'btn_depression'}, {text: 'кнопка 2', callback_data: 'button2'}],
+                  [{text: 'кнопка 3', callback_data: 'button3'}, {text: 'кнопка 4', callback_data: 'button4'}],
+                  [{text: 'кнопка 5', callback_data: 'button5'}, {text: 'кнопка 6', callback_data: 'button6'}],
+                  [{text: 'Индивидуальная консультация', url: 'https://t.me/ddipperq'}]]
                },
-               caption: 'Вы перешли в *каталог*, выберите нужный вам товар, нажам на кнопку ниже.'
+               caption: 'Вы перешли в *каталог*, выберите нужный вам товар, нажам на кнопку ниже.',
+               parse_mode: 'Markdown'
            }
 
-           await client.editMessageMedia({type: 'photo', media: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSf_C3OjH3BbicdZ1UP0jAncMv-HpNvU_B1fg6C8H_vcg&s'}, options);
+
+           client.editMessageMedia(
+            {
+              type: 'photo',
+              media: 'https://media.istockphoto.com/id/1146517111/photo/taj-mahal-mausoleum-in-agra.jpg?s=612x612&w=0&k=20&c=vcIjhwUrNyjoKbGbAQ5sOcEzDUgOfCsm9ySmJ8gNeRk='
+            },
+            {
+              chat_id: callbackQuery.message.chat.id,
+              message_id: callbackQuery.message.message_id
+            }
+          ).then(() => {
+            client.editMessageCaption(
+              options.caption,
+              {
+                chat_id: callbackQuery.message.chat.id,
+                message_id: callbackQuery.message.message_id,
+                parse_mode: options.parse_mode,
+                reply_markup: options.reply_markup
+              }
+            );
+          });
 
          });
       }
-
 
       // client.editMessageText(msg.message.chat.id, msg.message.id, {caption: caption.caption, parse_mode: 'Markdown', reply_markup: none});
       
