@@ -3,12 +3,12 @@ const fs = require('node:fs')
 module.exports = {
    name: 'message',
 	async execute(client, msg) {
-      if(msg.text === '/panel') {
+      if(msg.text === '/start' ) {
           
          const options = {
             reply_markup: {
                inline_keyboard: [
-                  [{text: 'Перейти в каталог', callback_data: 'start'}]
+                  [{text: 'Перейти в каталог', callback_data: 'catalog'}]
                ]
             },
             caption: 'Здравствуйте, добро пожаловать в интрнет-магазин *dq development shop*, для просмотра списка товаров нажмите на кнопку ниже.',
