@@ -1,15 +1,15 @@
 module.exports = {
    catalog: {
-      reply_markup: { inline_keyboard: [ 
-        [{text: 'Депрессия', callback_data: 'button1'}, {text: 'Стресс', callback_data: 'button2'}],
-        [{text: 'ПРЛ', callback_data: 'button3'}, {text: 'Выгорание', callback_data: 'button4'}],
-        [{text: 'video buttonиииииииии', callback_data: 'button5'}, {text: 'кнопка 6', callback_data: 'button6'}],
-        [{text: 'Индивидуальная консультация', url: 'https://t.me/ddipperq'}],
-        [{text: 'Сообщить о неисправности', url: 'https://t.me/ddipperq'}, {text: 'Телеграм канал', url: 'https://t.me/+YogRN4ycbX05YWJi'}]]
+      reply_markup: { inline_keyboard: [ [{text: 'Пройти тест', callback_data: 'test'}],
+        [{text: 'Стресс', callback_data: 'button1'}, {text: 'Выгорание', callback_data: 'button2'}],
+        [{text: 'Депрессия', callback_data: 'button3'}, {text: 'Буллинг', callback_data: 'button4'}],
+        [{text: 'Кнопка 5', callback_data: 'button5'}, {text: 'Кнопка 6', callback_data: 'button6'}],
+        [{text: 'Анонимная консультация', url: 'https://t.me/QuestionStopBullyingBot'}],
+        [{text: 'Индивидуальная консультация', url: 'https://t.me/Konst_BC'}, {text: 'Телеграм канал', url: 'https://t.me/StopBullyingBy'}]]
      },
-     caption: 'Вы перешли в *каталог*, выберите нужный вам товар, нажам на кнопку ниже.',
+     caption: 'Вы перешли в *меню*, выберите нужный вам товар, нажам на кнопку ниже.',
      parse_mode: 'Markdown',
      type: 'photo',
-     image: 'https://media.istockphoto.com/id/1146517111/photo/taj-mahal-mausoleum-in-agra.jpg?s=612x612&w=0&k=20&c=vcIjhwUrNyjoKbGbAQ5sOcEzDUgOfCsm9ySmJ8gNeRk='
+     image: 'https://i.imgur.com/PApicZl.png'
    }
 }

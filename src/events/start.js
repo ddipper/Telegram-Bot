@@ -7,14 +7,14 @@ module.exports = {
          const options = {
             reply_markup: {
                inline_keyboard: [
-                  [{text: 'Перейти в каталог', callback_data: 'catalog'}]
+                  [{text: 'Перейти в меню', callback_data: 'catalog'}]
                ]
             },
-            caption: 'Здравствуйте, добро пожаловать в интрнет-магазин *dq development shop*, для просмотра списка товаров нажмите на кнопку ниже.',
+            caption: 'Добро пожаловать в бота проекта *«СТОП буллинг»*, который создан для объяснения и разъяснения психологических аспектов.',
             parse_mode: 'Markdown'
          }
 
-         client.sendPhoto(msg.chat.id, 'https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg', options);
+         client.sendPhoto(msg.chat.id, 'https://i.imgur.com/xUkyxnu.png', options);
 
       }
    },
