@@ -12,8 +12,7 @@ module.exports = {
 
   test2: {
       reply_markup: { inline_keyboard: [
-         [{text: 'Да', callback_data: 'testYes'}],
-         [{text: 'Нет', callback_data: 'testNo'}]
+         [{text: 'Да', callback_data: 'testYes'},{text: 'Нет', callback_data: 'testNo'}]
          ]
       },
       caption: 'Есть ли буллинг у вас в учреждении?',
@@ -24,8 +23,7 @@ module.exports = {
 
    test3: {
       reply_markup: { inline_keyboard: [
-         [{text: 'Да', callback_data:'testBulYes'}],
-         [{text: 'Нет', callback_data: 'testBulNo'}]
+         [{text: 'Да', callback_data:'testBulYes'},{text: 'Нет', callback_data: 'testBulNo'}]
          ]
       },
       caption: 'Подвергались ли вы буллингу?',
@@ -36,8 +34,7 @@ module.exports = {
 
    test4: {
       reply_markup: { inline_keyboard: [
-         [{text: 'Учителя', callback_data: 'testTeach'}],
-         [{text: 'Ученика', callback_data: 'testStud'}]
+         [{text: 'Учителя', callback_data: 'testTeach'}, {text: 'Ученика', callback_data: 'testStud'}]
          ]
       },
       caption: 'С чьей стороны?',

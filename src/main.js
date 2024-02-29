@@ -1,6 +1,7 @@
 require('dotenv').config()
 const Client = require('node-telegram-bot-api')
 const events_init = require('./utils/events_init')
+const {initDb} = require('./db')
 
 const client  = new Client(process.env.TOKEN, {polling: true});
 

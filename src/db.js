@@ -9,14 +9,38 @@ const sequelize = new Sequelize({
  const Chat = sequelize.define( 
    'Chat',
    {
+      chatId: {
+         type: DataTypes.INTEGER,
+         allowNull: false,
+      },
       usr: {
          type: DataTypes.STRING,
          allowNull: false,
       },
-      messageId: {
+      msg: {
          type: DataTypes.INTEGER,
          allowNull: false,
-      }
+      },
+      q1: {
+         type: DataTypes.STRING,
+         allowNull: true,
+      },
+      q2: {
+         type: DataTypes.STRING,
+         allowNull: true,
+      },
+      q3: {
+         type: DataTypes.STRING,
+         allowNull: true,
+      },
+      q4: {
+         type: DataTypes.STRING,
+         allowNull: true,
+      },
+      q5: {
+         type: DataTypes.STRING,
+         allowNull: true,
+      },
    },
    {
       timestamps: false,
