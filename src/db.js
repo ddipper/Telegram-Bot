@@ -13,10 +13,6 @@ const sequelize = new Sequelize({
          type: DataTypes.INTEGER,
          allowNull: false,
       },
-      usr: {
-         type: DataTypes.STRING,
-         allowNull: false,
-      },
       msg: {
          type: DataTypes.INTEGER,
          allowNull: false,

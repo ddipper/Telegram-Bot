@@ -21,7 +21,7 @@ module.exports = {
          }
          
          else if (callbackQuery.data == 'testSchool' || callbackQuery.data == 'testUniver') {
-            const chat = Chat.build({chatId: callbackQuery.message.chat.id, usr: callbackQuery.message.chat.username ?? undefined, msg:callbackQuery.message.message_id, q5: 'UNSIGNED'});
+            const chat = Chat.build({chatId: callbackQuery.message.chat.id, msg: callbackQuery.message.message_id, q5: 'UNSIGNED'});
             if(callbackQuery.data == 'testSchool') {
                chat.q1 = 'Школа';
             } else {
