@@ -55,7 +55,8 @@ module.exports = {
 
    final: {
       reply_markup: { inline_keyboard: [
-         [{text: 'Перейти в меню', callback_data: 'back'}]
+         [{text: 'Индивидуальная консультация', url: 'https://t.me/Konst_BC'}],
+         [{text: '«  Перейти в меню', callback_data: 'back'}]
          ]
       },
       caption: 'Вы успешно прошли тест! Результаты отправлены нашим специалистам для составления статистики, *спасибо* что помогли нам!',

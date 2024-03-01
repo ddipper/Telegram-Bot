@@ -7,7 +7,7 @@ module.exports = {
         [{text: 'Анонимная консультация', url: 'https://t.me/QuestionStopBullyingBot'}],
         [{text: 'Индивидуальная консультация', url: 'https://t.me/Konst_BC'}, {text: 'Телеграм канал', url: 'https://t.me/StopBullyingBy'}]]
      },
-     caption: 'Вы перешли в *меню*, выберите нужный вам , нажам на кнопку ниже.',
+     caption: 'Вы перешли в меню, выберите нужный вам раздел, нажав на кнопку ниже.',
      parse_mode: 'Markdown',
      type: 'photo',
      image: 'https://i.imgur.com/PApicZl.png'
